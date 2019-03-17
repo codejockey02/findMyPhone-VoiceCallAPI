@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const api = require('./api.js');
-
+const port = process.env.PORT || 3000;
 app.use(bodyParser.json({
     limit: '25mb',
 }));
@@ -41,5 +41,5 @@ app.post('/call', (req, res) => {
     });
 });
 
-app.listen(3000);
+app.listen(port);
 console.log('Online');
