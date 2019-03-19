@@ -73,6 +73,8 @@ app.post('/verify', async (req, res) => {
         let ref = admin.database().ref(link);
         const obj = {
             name,
+            latitude: 12.9732,
+            longitude: 79.1582,
         };
         ref.set(obj);
         res.json({
