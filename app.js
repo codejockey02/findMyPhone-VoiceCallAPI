@@ -54,6 +54,7 @@ app.post('/call', async (req, res) => {
 
 app.post('/allowaccess', async (req, res) => {
     const number = req.body.uname;
+    console.log(number);
     sendOtp.send(number, "FINDME", "569812", function (error, data) {});
     res.json({
         error: false,
